@@ -5,7 +5,7 @@ interface IHeaderEmits {
 
 const emit = defineEmits<IHeaderEmits>()
 const indicatorOpacity = ref(0)
-const indicatorWidth = ref(100)
+const indicatorWidth = ref(0)
 const indicatorLeft = ref(0)
 
 const indicatorStyle = computed(() => {
