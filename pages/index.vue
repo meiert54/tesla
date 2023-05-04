@@ -1,3 +1,7 @@
+<script setup lang="ts">
+
+</script>
+
 <template>
     <div class="index-page">
         <section id="model-y"></section>
@@ -11,10 +15,14 @@
 
 <style lang="scss">
 .index-page {
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
     width: 100%;
-    height: 100%;
+    height: 100vh;
 
     section {
+        scroll-snap-align: center;
         height: 100vh;
         background-position: center;
         background-repeat: no-repeat;
