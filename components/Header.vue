@@ -18,11 +18,9 @@ const indicatorStyle = computed(() => {
 
 const hover = (e: MouseEvent) => {
     let el: any = e.target
-    let width = el.offsetWidth
-    let left = el.offsetLeft
 
-    indicatorWidth.value = width
-    indicatorLeft.value = left
+    indicatorWidth.value = el.offsetWidth
+    indicatorLeft.value = el.offsetLeft
 
     setTimeout(() => indicatorOpacity.value = .6, 100)
 }
@@ -98,6 +96,8 @@ header {
             font-size: .9rem;
             font-weight: bold;
             color: var(--font);
+            white-space: nowrap;
+            letter-spacing: -0.3px;
         }
     }
 

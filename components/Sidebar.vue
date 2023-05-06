@@ -93,6 +93,7 @@ const closeMenu = () => emit('closeMenu')
             border-radius: .2rem;
             font-size: .9rem;
             font-weight: bold;
+            letter-spacing: -0.3px;
             color: var(--font);
             transition: background .3s ease;
 
