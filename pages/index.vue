@@ -1,48 +1,28 @@
 <script setup lang="ts">
+const attrs = useAttrs()
 
+const scrollingMode = computed(() => {
+    if (attrs.active) return { overflowY: 'hidden' }
+    else return { overflowY: 'scroll' }
+})
 </script>
 
 <template>
-    <main class="index-page">
-        <ModelSection id="model-y" title="Model Y" :ncap="true" />
-        <ModelSection id="model-3" title="Model 3" :ncap="true" />
-        <ModelSection id="model-s" title="Model S" :ncap="false" />
-        <ModelSection id="model-x" title="Model X" :ncap="false" />
-        <section id="powerwall"></section>
-        <section id="accessoires"></section>
+    <main class="index-page" :style="scrollingMode">
+        <ModelSection :is-model="true" name="y" img="model-y.png" :ncap="true" />
+        <ModelSection :is-model="true" name="3" img="model-3.png" :ncap="true" />
+        <ModelSection :is-model="true" name="s" img="model-s.png" :ncap="false" />
+        <ModelSection :is-model="true" name="x" img="model-x.png" :ncap="false" />
+        <ModelSection :is-model="false" name="powerwall" img="powerwall.png" :ncap="false" />
+        <ModelSection :is-model="false" name="accessoires" img="accessoires.png" :ncap="false" />
     </main>
 </template>
 
 <style lang="scss">
 .index-page {
     scroll-behavior: smooth;
-    overflow-y: scroll;
     scroll-snap-type: y mandatory;
     width: 100%;
     height: 100vh;
-
-    #model-y {
-        background-image: url('/img/model-y.png');
-    }
-
-    #model-3 {
-        background-image: url('/img/model-3.png');
-    }
-    
-    #model-s {
-        background-image: url('/img/model-s.png');
-    }
-    
-    #model-x {
-        background-image: url('/img/model-x.png');
-    }
-    
-    #powerwall {
-        background-image: url('/img/powerwall.png');
-    }
-    
-    #accessoires {
-        background-image: url('/img/accessoires.png');
-    }
 }
 </style>

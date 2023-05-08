@@ -1,15 +1,19 @@
 <script setup lang="ts">
 interface ISectionProps {
-    id: string,
-    title: string,
+    isModel: boolean,
+    name: string,
+    img: string,
     ncap: boolean
 }
 
 const props = defineProps<ISectionProps>()
+
+const id = ref(props.isModel ? `model-${props.name.toLowerCase()}` : props.name.toLowerCase())
+const title = ref(props.isModel ? `Model ${props.name.toUpperCase()}` : props.name.toUpperCase())
 </script>
 
 <template>
-    <section :id="id">
+    <section :id="id" :style="{ backgroundImage: `url('/img/${img}')` }">
         <div class="title">
             <h1>{{ title }}</h1>
             <p>Réservez votre essai</p>

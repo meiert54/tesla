@@ -6,7 +6,7 @@ const active = ref(false)
   <div id="app">
     <Header @open-menu="active = true" />
     <Sidebar :active="active" @close-menu="active = false" />
-    <NuxtPage/>
+    <NuxtPage :active="active" />
   </div>
 </template>
 

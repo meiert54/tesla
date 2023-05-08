@@ -22,10 +22,10 @@ const hover = (e: MouseEvent) => {
     indicatorWidth.value = el.offsetWidth
     indicatorLeft.value = el.offsetLeft
 
-    setTimeout(() => indicatorOpacity.value = .6, 100)
+    setTimeout(() => indicatorOpacity.value = .6, 50)
 }
 
-const leave = () => setTimeout(() => indicatorOpacity.value = 0, 100)
+const leave = () => setTimeout(() => indicatorOpacity.value = 0, 50)
 
 const openMenu = () => emit('openMenu')
 </script>
