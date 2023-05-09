@@ -141,11 +141,12 @@ header {
         height: 33px;
         background: var(--hover);
         border-radius: .2rem;
-        transition: .4s cubic-bezier(0.860, 0.160, 0.105, 0.855);
+        transition: .3s cubic-bezier(0.860, 0.160, 0.105, 0.855);
     }
 }
 
 .index-page {
+    overflow-y: scroll;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
     width: 100%;

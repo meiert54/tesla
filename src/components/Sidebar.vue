@@ -7,7 +7,7 @@ interface ISidebarEmits {
     (e: 'closeMenu'): void
 }
 
-const props = defineProps<ISidebarProps>()
+defineProps<ISidebarProps>()
 const emit = defineEmits<ISidebarEmits>()
 
 const closeMenu = () => emit('closeMenu')

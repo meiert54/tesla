@@ -10,6 +10,6 @@ const active = ref(false)
   <div id="app">
     <Header @open-menu="active = true" />
     <Sidebar :active="active" @close-menu="active = false" />
-    <RouterView :active="active" />
+    <RouterView />
   </div>
 </template>

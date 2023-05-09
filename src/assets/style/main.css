@@ -162,12 +162,13 @@ header .indicator {
   height: 33px;
   background: var(--hover);
   border-radius: 0.2rem;
-  -webkit-transition: 0.4s cubic-bezier(0.86, 0.16, 0.105, 0.855);
-  -o-transition: 0.4s cubic-bezier(0.86, 0.16, 0.105, 0.855);
-  transition: 0.4s cubic-bezier(0.86, 0.16, 0.105, 0.855);
+  -webkit-transition: 0.3s cubic-bezier(0.86, 0.16, 0.105, 0.855);
+  -o-transition: 0.3s cubic-bezier(0.86, 0.16, 0.105, 0.855);
+  transition: 0.3s cubic-bezier(0.86, 0.16, 0.105, 0.855);
 }
 
 .index-page {
+  overflow-y: scroll;
   scroll-behavior: smooth;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
