@@ -1,10 +1,7 @@
 <script setup lang="ts">
 const attrs = useAttrs()
 
-const scrollingMode = computed(() => {
-    if (attrs.active) return { overflowY: 'hidden' }
-    else return { overflowY: 'scroll' }
-})
+const scrollingMode = computed(() => attrs.active ? { overflowY: 'hidden' } : { overflowY: 'scroll' })
 </script>
 
 <template>
