@@ -1,0 +1,278 @@
+@font-face {
+  font-family: gotham;
+  src: url("/src/assets/fonts/GothamSSm-Book_Web.woff2");
+  font-weight: normal;
+}
+@font-face {
+  font-family: gotham;
+  src: url("/src/assets/fonts/GothamSSm-Medium_Web.woff2");
+  font-weight: bold;
+}
+:root {
+  --white: #FEFEFE;
+  --font: #393c41;
+  --hover: rgba(0, 0, 0, .1);
+}
+
+*,
+*::before,
+*::after {
+  font-family: gotham, sans-serif;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body,
+#__nuxt,
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar {
+  position: fixed;
+  padding: 2rem 1rem;
+  background: var(--white);
+  height: 100vh;
+  right: 0;
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.sidebar.active {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+}
+.sidebar .header {
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.sidebar .header .xmark {
+  padding: 0.3rem 0.6rem;
+  font-size: 1.7rem;
+  color: var(--font);
+  cursor: pointer;
+  border-radius: 0.2rem;
+  -webkit-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+}
+.sidebar .header .xmark:hover {
+  background: var(--hover);
+}
+.sidebar .navigation {
+  padding: 0 1rem;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+.sidebar .navigation .nav-item {
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: -0.3px;
+  color: var(--font);
+  -webkit-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+}
+.sidebar .navigation .nav-item:hover {
+  background: var(--hover);
+}
+
+header {
+  position: fixed;
+  padding: 0.7rem 2rem 0rem 3rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+header .logo .icon {
+  cursor: pointer;
+  width: 120px;
+}
+header .logo .icon img {
+  width: 100%;
+  height: 100%;
+}
+header ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header ul:nth-of-type(2) {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+header ul .item {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--font);
+  white-space: nowrap;
+  letter-spacing: -0.3px;
+}
+header .indicator {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  left: 0;
+  width: 100px;
+  height: 33px;
+  background: var(--hover);
+  border-radius: 0.2rem;
+  -webkit-transition: 0.4s cubic-bezier(0.86, 0.16, 0.105, 0.855);
+  -o-transition: 0.4s cubic-bezier(0.86, 0.16, 0.105, 0.855);
+  transition: 0.4s cubic-bezier(0.86, 0.16, 0.105, 0.855);
+}
+
+.index-page {
+  scroll-behavior: smooth;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  width: 100%;
+  height: 100vh;
+}
+.index-page section {
+  padding-top: 7rem;
+  padding-bottom: 0;
+  scroll-snap-align: center;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.index-page section .title {
+  text-align: center;
+  color: var(--font);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+.index-page section .title h1 {
+  font-size: 2.5rem;
+  letter-spacing: -0.5px;
+}
+.index-page section .title p {
+  cursor: pointer;
+  position: relative;
+  letter-spacing: -0.3px;
+  padding-bottom: 1px;
+  font-size: 0.9rem;
+}
+.index-page section .title p::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1.3px;
+  width: 100%;
+  background: #000;
+  -webkit-transform: scaleY(1);
+      -ms-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-transform-origin: top;
+      -ms-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.index-page section .title p:hover::before {
+  -webkit-transform: scaleY(1.3);
+      -ms-transform: scaleY(1.3);
+          transform: scaleY(1.3);
+}
+.index-page section .footer {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+}
+.index-page section .footer .buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.index-page section .footer .buttons button {
+  cursor: pointer;
+  padding: 0.7rem 1.5rem;
+  background: var(--font);
+  color: var(--white);
+  border: 0;
+  font-weight: bold;
+  font-size: 0.9rem;
+  letter-spacing: -0.3px;
+  border-radius: 0.3rem;
+}
+.index-page section .footer .buttons button:nth-child(2) {
+  background: var(--white);
+  color: var(--font);
+}
+.index-page section .footer p {
+  text-align: center;
+  font-size: 0.75rem;
+}/*# sourceMappingURL=main.css.map */

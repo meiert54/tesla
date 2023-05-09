@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { computed, useAttrs } from "vue";
+import Section from "@/components/Section.vue";
+
 const attrs = useAttrs()
 
 const scrollingMode = computed(() => attrs.active ? { overflowY: 'hidden' } : { overflowY: 'scroll' })
@@ -14,12 +17,3 @@ const scrollingMode = computed(() => attrs.active ? { overflowY: 'hidden' } : { 
         <Section :is-model="false" name="accessoires" img="accessoires.png" :ncap="false" />
     </main>
 </template>
-
-<style lang="scss">
-.index-page {
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-    width: 100%;
-    height: 100vh;
-}
-</style>

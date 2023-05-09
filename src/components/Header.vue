@@ -1,9 +1,12 @@
 <script setup lang="ts">
+import { ref, computed } from "vue";
+
 interface IHeaderEmits {
     (e: 'openMenu'): void
 }
 
 const emit = defineEmits<IHeaderEmits>()
+
 const indicatorOpacity = ref(0)
 const indicatorWidth = ref(0)
 const indicatorLeft = ref(0)
@@ -56,61 +59,3 @@ const openMenu = () => emit('openMenu')
         <span :style="indicatorStyle" class="indicator"></span>
     </header>
 </template>
-
-<style lang="scss">
-header {
-    position: fixed;
-    padding: 0.7rem 2rem 0rem 3rem;
-    width: 100%;
-    display: flex;
-    align-items: center;
-
-    & > * {
-        flex: 1;
-    }
-
-    .logo .icon {
-        cursor: pointer;
-        width: 120px;
-
-        img {
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-    ul {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        &:nth-of-type(2) {
-            justify-content: flex-end;
-        }
-
-        .item {
-            cursor: pointer;
-            padding: .5rem 1rem;
-            border-radius: .2rem;
-            font-size: .9rem;
-            font-weight: bold;
-            color: var(--font);
-            white-space: nowrap;
-            letter-spacing: -0.3px;
-        }
-    }
-
-    .indicator {
-        position: absolute;
-        z-index: -1;
-        opacity: 0;
-        left: 0;
-        width: 100px;
-        height: 33px;
-        background: var(--hover);
-        border-radius: .2rem;
-        transition: .4s cubic-bezier(0.860, 0.160, 0.105, 0.855);
-    }
-}
-</style>
