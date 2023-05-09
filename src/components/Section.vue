@@ -15,7 +15,7 @@ const title = ref(props.isModel ? `Model ${props.name.toUpperCase()}` : props.na
 </script>
 
 <template>
-    <section :id="id" :style="{ backgroundImage: `url('/src/assets/img/${img}')` }">
+    <section :id="id" :style="{ backgroundImage: `url('/img/${img}')` }">
         <div class="title">
             <h1>{{ title }}</h1>
             <p>Réservez votre essai</p>
