@@ -39,6 +39,12 @@ npm run dev
 npm run build
 ```
 
+### Build into a specific directory for production
+
+```sh
+node_modules\.bin\vite.ps1 build --base={directory}
+```
+
 ### Lint with [ESLint](https://eslint.org/)
 
 ```sh

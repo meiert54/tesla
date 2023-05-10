@@ -197,6 +197,24 @@ header .indicator {
       -ms-flex-align: center;
           align-items: center;
 }
+.index-page section#model-y {
+  background-image: url(/src/assets/img/model-y.png);
+}
+.index-page section#model-3 {
+  background-image: url(/src/assets/img/model-3.png);
+}
+.index-page section#model-s {
+  background-image: url(/src/assets/img/model-s.png);
+}
+.index-page section#model-x {
+  background-image: url(/src/assets/img/model-x.png);
+}
+.index-page section#powerwall {
+  background-image: url(/src/assets/img/powerwall.png);
+}
+.index-page section#accessoires {
+  background-image: url(/src/assets/img/accessoires.png);
+}
 .index-page section .title {
   text-align: center;
   color: var(--font);

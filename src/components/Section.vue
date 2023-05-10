@@ -4,7 +4,6 @@ import { ref } from "vue";
 interface ISectionProps {
     isModel: boolean,
     name: string,
-    img: string,
     ncap: boolean
 }
 
@@ -15,7 +14,7 @@ const title = ref(props.isModel ? `Model ${props.name.toUpperCase()}` : props.na
 </script>
 
 <template>
-    <section :id="id" :style="{ backgroundImage: `url('/img/${img}')` }">
+    <section :id="id">
         <div class="title">
             <h1>{{ title }}</h1>
             <p>Réservez votre essai</p>
