@@ -12,3 +12,13 @@ import Section from "@/components/Section.vue";
         <Section :is-model="false" name="accessoires" :ncap="false" />
     </main>
 </template>
+
+<style scoped>
+.index-page {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    width: 100%;
+    height: 100vh;
+}
+</style>
